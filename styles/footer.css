@@ -1,0 +1,119 @@
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding-bottom: 30px;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__content {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address .address__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.address .address__title:after {
+  content: '';
+  display: block;
+
+  width: 45px;
+  height: 4px;
+
+  margin-top: 17px;
+  
+
+  background: #ffffff;
+
+}
+
+.address .address__location {
+  font-weight: 400;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+.contact, .contact > *{
+  margin: 6px 0 0;
+}
+
+.contact .contact__mail,
+.contact .contact__phone {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-contact,
+.btn-talk {
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+  color: #000000;
+  height: 38px;
+
+  background: #FFFFFF;
+  border-radius: 5px;
+
+  padding: 5px 17px 5px 51px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+
+  position: relative;
+}
+
+.btn-talk{
+    margin-top: 25px;
+}
+
+.btn-contact:before{
+  content: '';
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.2337 0.666626H1.72725C0.798681 0.666626 0.047382 1.42663 0.047382 2.35551L0.0389404 12.4888C0.0389404 13.4177 0.798681 14.1777 1.72725 14.1777H15.2337C16.1623 14.1777 16.9221 13.4177 16.9221 12.4888V2.35551C16.9221 1.42663 16.1623 0.666626 15.2337 0.666626ZM15.2338 4.04448L8.48054 8.2667L1.72729 4.04448V2.35559L8.48054 6.57781L15.2338 2.35559V4.04448Z' fill='black'/%3E%3C/svg%3E%0A");  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 16px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+
+}
+
+.btn-talk:before{
+  content: '';
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='19' viewBox='0 0 16 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.16881 0.133301C3.97336 0.133301 0.571411 3.53641 0.571411 7.7333V13.6444C0.571411 15.0462 1.70258 16.1777 3.10388 16.1777H5.63635V9.42219H2.25972V7.7333C2.25972 4.4653 4.90193 1.82219 8.16881 1.82219C11.4357 1.82219 14.0779 4.4653 14.0779 7.7333V9.42219H10.7013V16.1777H14.0779V17.0222H8.16881V18.7111H13.2337C14.635 18.7111 15.7662 17.5795 15.7662 16.1777V7.7333C15.7662 3.53641 12.3643 0.133301 8.16881 0.133301Z' fill='black'/%3E%3C/svg%3E%0A");  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width:  16px;
+  height: 19px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+
+}
+
+.logo-vtex{
+    margin-left: 25px;
+}
+
+
+

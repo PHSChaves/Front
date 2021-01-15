@@ -1,0 +1,26 @@
+@import 'fonts.css';
+@import 'utils.css';
+
+@import 'header.css';
+@import 'footer.css';
+
+@import 'newsletter.css';
+
+@import 'main-banner.css';
+
+:root {
+  --main-color: #000000
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+
+  text-decoration: none;
+
+  margin: 0;
+}
+
+body{
+  margin:0;
+}
+

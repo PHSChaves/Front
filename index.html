@@ -1,120 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /></head>
-<body>
-    <header class="nav-bg">
-        <div class="nav">
-            <input type="checkbox" id="nav-check">
-                <div class="nav-logo">
-                    <img class="logo" src="img/logo.png" alt="">
-                </div>
-            <div class="search-form">
-                <form class="example" action="action_page.php">
-                    <input type="text" placeholder="O que está procurando?" name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                  </form>
-            </div>
 
-            <div class="nav-btn">
-                <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-                <div class="account">
-                    <i class="far fa-user"></i> Minha conta
-                </div>
-                <div class="bag">
-                    <i class="fas fa-shopping-cart"></i> 1
-                </div>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header class="header container">
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="corebiz" />    
+            </a>
+        </div>
+        <div class="header__search">
+            <form class="search" action="">
+                <input type="text" class="search__form" placeholder="O que você está procurando?">
+            </form>
+        </div>
+        <div class="header__account">
+            <a href="#" class="account-text">Minha Conta</a>
+        </div>
+        <div class="header__cart">
+            <a href="#" class="cart-quantity"></a>
         </div>
     </header>
 
-
-
-
-    <main class="main-container">
-        <div class="dots">
-            <span class="dot dot1"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-        <section id="left">
-            <div id="leftd">
-                <p>Olá, o que você está buscando? <br><span>Criar ou migrar seu E-commerce?</span></p>
-            </div>
-        </section>
-        <section id="right">
-        </section>
-    </main>
-
-    <main class="container">
-        <p class="b-p">Mais vendidos</p>
-        <div class="bd-bottom"></div>
-        <div class="product-main">
-            <div class="product 1">
-                asdfasdf
-            </div>
-            <div class="product 2">
-                asdfasdf
-            </div>
-            <div class="product 3">
-                asdfasdf
-            </div>
-            <div class="product 4">
-                asdfasdf
-            </div>
+    <main>
+        <div class="main-banner">
+            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
+            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
+            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
+            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
         </div>
     </main>
 
-    <main class="form-ctn">
-        <h1 class="form-h1">Participe de nossas news com promoções e novidades!</h1>
-        <form name="contact-form" class="contact-form">          
-            <input type="text" id="nomeid" placeholder="Digite seu nome" required="required" name="nome" />
-            <input type="email" id="emailid" placeholder="Digite seu email" name="email" />
-            <input type="submit" class="enviar" onclick="Enviar();" value="Eu quero!" />
-          </form>
-    </main>
-
-    <footer class="footer-bg">
-        <div class="container">
-            <div class="cm t-ft">
-                <p class="f-p">Localização</p>
-                <div class="bf-bottom"></div>
-                <p class="p-b">Avenida Andrômeda, 2000. Bloco 6 e 8 </p>
-                <p class="p-b">Alphavile SP</p>                
-                <p class="p-b">brasil@corebiz.ag</p>
-                <p class="p-b">+55 11 3090 1039</p>
-            </div>
-            <div class="cm f-tf">
-                <div class="btn">
-                    <a href="#" title="" class="btn btn-primary btn-facebook">
-                        <span></span></span> ENTRE EM CONTATO
-                    </a>
-                </div>
-                <div class="btn">
-                    <a href="#" title="" class="btn btn-primary btn-facebook">
-                        <span></span></span> FALE COM O NOSSO CONSULTOR ONLINE
-                    </a>
-                </div>
-            </div>
-            <div class="cm t-ft">
+    <footer class="footer">
+        <div class="newsletter">
+            <div class="newsletter__content container">
+                <h2 class="news-title">Participe de nossas news com promoções e novidades!</h2>
+                <form action="" class="news-form">
+                    <input type="text" class="text" placeholder="Digite seu nome">
+                    <input type="text" class="email" placeholder="Digite seu email">
+                    <input type="submit" class="submit" value="Eu quero!">
+                </form>
                 
             </div>
+            
         </div>
-        
-        <script href="main.js"></script>
+        <div class="footer__content container">
+            <div class="footer__content__column">
+                <div class="address">
+                    <h2 class="address__title">Localização</h2>
+                    <p class="address__location">Avenida Andrômeda, 2000. Bloco 6 e 8</p>
+                    <p class="address__location">Alphavile SP</p>
+                </div>
+                <div class="contact">
+                    <a href="mailto:brasil@corebiz.ag" class="contact__mail">brasil@corebiz.ag</a>
+                    <p class="contact__phone">+55 11 3090 1039</p>
+                </div>
+            </div>
+            <div class="footer__content__column">
+                <div class="buttons">
+                    <a href="#" class="btn-contact">
+                        ENTRE EM CONTATO
+                    </a>
+                    <a href="#" class="btn-talk">
+                        FALE COM O NOSSO CONSULTOR ONLINE 
+                    </a>
+                </div>
+                
+            </div>
+            <div class="footer__content__column">
+                <a href="https://www.corebiz.ag/" target="blank" class="logo-corebiz">
+                    <img src="img/core-footer.png" alt="corebiz" />
+                </a>
+                <a href="https://vtex.com/br-pt/" target="blank" class="logo-vtex">
+                    <img src="img/vtex.png" alt="vtex" />
+                </a>
+            </div>
+        </div>
+
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+
+    
 </body>
 </html>
