@@ -1,0 +1,149 @@
+
+.shelf__seller{
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.shelf__seller:after{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 5px;
+    background-color: #c0c0c0
+}
+
+.shelf__item{
+    flex-direction: column;
+    justify-content:center;
+    width: 216px;
+    align-items: center;
+    margin: 0 30px;
+
+    outline: none;
+}
+
+.shelf__item.slick-slide.slick-active{
+    display: flex;
+}
+
+.slick-prev.slick-arrow {
+    transform: rotate(180deg);
+
+} 
+
+.slick-next.slick-arrow:before,
+.slick-prev.slick-arrow:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='22' viewBox='0 0 14 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1115 10.1416L3.3212 0.351461C3.09476 0.124845 2.79249 0 2.47018 0C2.14788 0 1.8456 0.124845 1.61917 0.351461L0.89818 1.07227C0.42903 1.54195 0.42903 2.30533 0.89818 2.7743L9.11932 10.9954L0.889058 19.2257C0.662621 19.4523 0.537598 19.7544 0.537598 20.0765C0.537598 20.399 0.662621 20.7011 0.889058 20.9279L1.61004 21.6485C1.83666 21.8752 2.13876 22 2.46106 22C2.78337 22 3.08564 21.8752 3.31208 21.6485L13.1115 11.8495C13.3385 11.6222 13.4631 11.3186 13.4624 10.996C13.4631 10.6721 13.3385 10.3687 13.1115 10.1416Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;    
+}
+
+.shelf__item:hover{
+    background-color:#E6E8EA;
+}
+
+.product-image{
+    position:relative;
+    background: #ffffff;
+    width: 100%;
+}
+
+.product-flag{
+    position: absolute;
+    top: 0;
+    height: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 80px 72px 0;
+    border-color: transparent #f8475f transparent transparent;
+
+}
+
+.product-flag:before{
+    content: 'OFF';
+    position: absolute;
+    right: -70px;
+    top: 15px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+
+.product-info__name{
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7a7a7a;
+    text-align: center;
+}
+
+.product-info__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-info__rating .star {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.3896 4.4595L7.29501 4.13318L5.69478 0.648972L4.09454 4.13845L0 4.4595L3.10935 6.94897L2.17541 10.649L5.69478 8.68581L9.21415 10.649L8.2859 6.94897L11.3896 4.4595ZM5.69477 7.70161L3.55353 8.89634L4.12301 6.64371L2.23234 5.12792L4.72666 4.92792L5.69477 2.80687L6.66857 4.93319L9.16289 5.13319L7.27222 6.64897L7.8417 8.90161L5.69477 7.70161Z' fill='%23F8475F'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 14px;
+}
+.product-info__rating .star.checked {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.69478 8.03684L9.21415 10L8.28021 6.3L11.3896 3.81053L7.29501 3.48947L5.69478 0L4.09454 3.48947L0 3.81053L3.10935 6.3L2.17541 10L5.69478 8.03684Z' fill='%23F8475F'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 14px;
+}
+
+.product-info__price .price{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.product-info__installment{
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: #7A7A7A;
+    height: 15px;
+}
+
+.buy-btn{
+    background: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 8px 28px;
+    border: none;
+    max-width: 125px;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    opacity: 0;
+}
+
+.shelf__item:hover .buy-btn{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.list-price{
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    height: 23px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #7A7A7A;
+    text-decoration: line-through;
+}
+

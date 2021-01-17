@@ -13,23 +13,27 @@
 </head>
 
 <body>
-    <header class="header container">
-        <div class="header__logo">
-            <a href="#">
-                <img src="img/logo.png" alt="corebiz" />    
-            </a>
+    <header class="header">
+        <div class="header-nav container">
+            <div class="header-nav__logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="corebiz" />    
+                </a>
+            </div>
+            <div class="header-nav__search">
+                <form class="search" action="">
+                    <input type="text" class="search__form" placeholder="O que você está procurando?">
+                </form>
+            </div>
+            <div class="header-nav__account">
+                <a href="#" class="account-text">Minha Conta</a>
+            </div>
+            <div class="header-nav__cart">
+                <a href="#" class="cart-icon"></a>
+                <span class="cart-quantity"></span>
+            </div>
         </div>
-        <div class="header__search">
-            <form class="search" action="">
-                <input type="text" class="search__form" placeholder="O que você está procurando?">
-            </form>
-        </div>
-        <div class="header__account">
-            <a href="#" class="account-text">Minha Conta</a>
-        </div>
-        <div class="header__cart">
-            <a href="#" class="cart-quantity"></a>
-        </div>
+        
     </header>
 
     <main>
@@ -39,6 +43,13 @@
             <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
             <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
         </div>
+        <div class="container shelf">
+            <p class="shelf__seller">Mais Vendidos</p>
+            <div class="shelf__content">
+                
+            </div>
+           
+        </div>
     </main>
 
     <footer class="footer">
@@ -46,8 +57,10 @@
             <div class="newsletter__content container">
                 <h2 class="news-title">Participe de nossas news com promoções e novidades!</h2>
                 <form action="" class="news-form">
-                    <input type="text" class="text" placeholder="Digite seu nome">
+                    <input type="text" class="name" placeholder="Digite seu nome">
+                    <p class="error-message"></p>
                     <input type="text" class="email" placeholder="Digite seu email">
+                    <p class="error-message"></p>
                     <input type="submit" class="submit" value="Eu quero!">
                 </form>
                 
