@@ -1,112 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-    <title>Document</title>
+    <title>Corebiz - Teste</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <div class="header-nav container">
-            <div class="header-nav__logo">
-                <a href="#">
-                    <img src="img/logo.png" alt="corebiz" />    
-                </a>
-            </div>
-            <div class="header-nav__search">
-                <form class="search" action="">
-                    <input type="text" class="search__form" placeholder="O que você está procurando?">
-                </form>
-            </div>
-            <div class="header-nav__account">
-                <a href="#" class="account-text">Minha Conta</a>
-            </div>
-            <div class="header-nav__cart">
-                <a href="#" class="cart-icon"></a>
-                <span class="cart-quantity"></span>
-            </div>
+      <div class="header-nav container">
+        <div class="header-nav__logo">
+          <a href="/">
+            <img src="img/logo.png" alt="corebiz" />
+          </a>
         </div>
-        
+        <div class="header-nav__search">
+          <form class="search" action="">
+            <input
+              type="text"
+              class="search__form"
+              placeholder="O que você está procurando?"
+            />
+          </form>
+        </div>
+        <div class="header-nav__account">
+          <a href="#" class="account-text">Minha Conta</a>
+        </div>
+        <div class="header-nav__cart">
+          <a href="#" class="cart-icon"></a>
+          <span class="cart-quantity"></span>
+        </div>
+      </div>
+
+      <div class="header-nav-mobile container">
+        <div class="top-nav">
+          <div class="top-nav__menu">
+            <span class="top-nav__menu-icon"></span>
+            <span class="top-nav__menu-icon"></span>
+            <span class="top-nav__menu-icon"></span>
+          </div>
+
+          <div class="top-nav__logo">
+            <a href="/">
+              <img src="img/logo.png" alt="corebiz" />
+            </a>
+          </div>
+          <div class="top-nav__cart">
+            <a href="#" class="cart-icon"></a>
+            <span class="cart-quantity"></span>
+          </div>
+        </div>
+        <div class="header-search">
+          <form class="search-form" action="">
+            <input
+              type="text"
+              class="search"
+              placeholder="O que você está procurando?"
+            />
+          </form>
+        </div>
+      </div>
     </header>
 
     <main>
-        <div class="main-banner">
-            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
-            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
-            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
-            <img src="img/banner.jpg" alt="banner principal" class="main-banner__banner">
-        </div>
-        <div class="container shelf">
-            <p class="shelf__seller">Mais Vendidos</p>
-            <div class="shelf__content">
-                
-            </div>
-           
-        </div>
+      <div class="main-banner">
+        <img
+          src="img/banner.jpg"
+          alt="banner principal"
+          class="main-banner__banner"
+        />
+        <img
+          src="img/banner.jpg"
+          alt="banner principal"
+          class="main-banner__banner"
+        />
+        <img
+          src="img/banner.jpg"
+          alt="banner principal"
+          class="main-banner__banner"
+        />
+        <img
+          src="img/banner.jpg"
+          alt="banner principal"
+          class="main-banner__banner"
+        />
+      </div>
+
+      <div class="container shelf">
+        <p class="shelf__seller">Mais Vendidos</p>
+        <div class="shelf__content"></div>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="newsletter">
-            <div class="newsletter__content container">
-                <h2 class="news-title">Participe de nossas news com promoções e novidades!</h2>
-                <form action="" class="news-form">
-                    <input type="text" class="name" placeholder="Digite seu nome">
-                    <p class="error-message"></p>
-                    <input type="text" class="email" placeholder="Digite seu email">
-                    <p class="error-message"></p>
-                    <input type="submit" class="submit" value="Eu quero!">
-                </form>
-                
+      <div class="newsletter">
+        <div class="newsletter__content container">
+          <h2 class="news-title">
+            Participe de nossas news com promoções e novidades!
+          </h2>
+          <form action="" class="news-form">
+            <div class="news-form__box-name">
+              <input type="text" class="name" placeholder="Digite seu nome" />
+              <p class="error-name">Preencha com seu nome completo</p>
             </div>
-            
-        </div>
-        <div class="footer__content container">
-            <div class="footer__content__column">
-                <div class="address">
-                    <h2 class="address__title">Localização</h2>
-                    <p class="address__location">Avenida Andrômeda, 2000. Bloco 6 e 8</p>
-                    <p class="address__location">Alphavile SP</p>
-                </div>
-                <div class="contact">
-                    <a href="mailto:brasil@corebiz.ag" class="contact__mail">brasil@corebiz.ag</a>
-                    <p class="contact__phone">+55 11 3090 1039</p>
-                </div>
+            <div class="news-form__box-mail">
+              <input type="text" class="email" placeholder="Digite seu email" />
+              <p class="error-email">Preencha com um e-mail válido</p>
             </div>
-            <div class="footer__content__column">
-                <div class="buttons">
-                    <a href="#" class="btn-contact">
-                        ENTRE EM CONTATO
-                    </a>
-                    <a href="#" class="btn-talk">
-                        FALE COM O NOSSO CONSULTOR ONLINE 
-                    </a>
-                </div>
-                
-            </div>
-            <div class="footer__content__column">
-                <a href="https://www.corebiz.ag/" target="blank" class="logo-corebiz">
-                    <img src="img/core-footer.png" alt="corebiz" />
-                </a>
-                <a href="https://vtex.com/br-pt/" target="blank" class="logo-vtex">
-                    <img src="img/vtex.png" alt="vtex" />
-                </a>
-            </div>
+            <input type="submit" class="submit" value="Eu quero!" />
+          </form>
+          <div class="error-messages"></div>
         </div>
 
+        <div class="newsletter-success container">
+          <p class="form-success">Seu e-mail foi cadastrado com successo!</p>
+          <p class="form-success-tiny">
+            A partir de agora você receberá as novidades e ofertas exclusivas
+          </p>
+          <button class="submit-again">Cadastrar novo e-mail</button>
+        </div>
+      </div>
+
+      <div class="footer__content container">
+        <div class="footer__content__column">
+          <div class="address">
+            <h2 class="address__title">Localização</h2>
+            <p class="address__location">
+              Avenida Andrômeda, 2000. Bloco 6 e 8
+            </p>
+            <p class="address__location">Alphavile SP</p>
+          </div>
+          <div class="contact">
+            <a href="mailto:brasil@corebiz.ag" class="contact__mail"
+              >brasil@corebiz.ag</a
+            >
+            <p class="contact__phone">+55 11 3090 1039</p>
+          </div>
+        </div>
+        <div class="footer__content__column">
+          <div class="buttons">
+            <a href="#" class="btn-contact"> ENTRE EM CONTATO </a>
+            <a href="#" class="btn-talk"> FALE COM O NOSSO CONSULTOR ONLINE </a>
+          </div>
+        </div>
+        <div class="footer__content__column">
+          <a href="https://www.corebiz.ag/" target="blank" class="logo-corebiz">
+            <img src="img/core-footer.png" alt="corebiz" />
+          </a>
+          <a href="https://vtex.com/br-pt/" target="blank" class="logo-vtex">
+            <img src="img/vtex.png" alt="vtex" />
+          </a>
+        </div>
+      </div>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-
-    
-</body>
+  </body>
 </html>

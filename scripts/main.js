@@ -2,18 +2,25 @@ function init() {
   mainBannerSlide();
   getShelfProducts();
   cartQuantity();
-
   newsLetter();
 }
 
 function mainBannerSlide(){
-    $(".main-banner").slick({
-      dots:true,
-      arrows:false,
-      autoplay: true,
-      infinite: true,
-      autoplaySpeed: 3000
-    });
+  const mainBanner = $(".main-banner")
+  $(mainBanner).slick({
+    dots:true,
+    arrows:false,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 3000
+  });
+
+  if ($(window).width() < 768) {
+    $(mainBanner).find('img').attr('src', 'img/banner-mobile.jpg');
+  } else {
+    $(mainBanner).find('img').attr('src', 'img/banner.jpg');
+  }
+  
 }
 
 function getShelfProducts(){
@@ -25,8 +32,6 @@ function getShelfProducts(){
 
     console.log(data);
     formatProduct(data);
-    shelfSlide();
-    productStars();
     addToCart();
     });
 }
@@ -77,8 +82,10 @@ function formatProduct(products){
       </div>
       `;
     $(".shelf__content").append(productHtml);
-
   }
+  productStars();
+  shelfSlide();
+
 }
 
 function shelfSlide(){
@@ -87,6 +94,16 @@ function shelfSlide(){
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 2,
+        }
+      }
+    ]
   });
 
 }
@@ -97,20 +114,21 @@ function productStars() {
     let productRate = $(this).find('.product-info__rating').attr('data-rate'),
         item = $(this);
 
-    for(let i = 0; i < productRate; i++) {
-      $(item).find('.product-info__rating').append(`<span class="star checked"></span>`)
-    }
-
-    for(let i = $(item).find('.product-info__rating .star').length; i< 5; i++) {
-      $(item).find('.product-info__rating').append(`<span class="star"></span>`)
-    }
+    for(let i = 0; i < 5; i++) {
+      if (i < productRate) {
+        $(item).find('.product-info__rating').append(`<span class="star checked"></span>`)
+      } else {
+        $(item).find('.product-info__rating').append(`<span class="star"></span>`)
+      }
+    } 
   })
 }
 
 function addToCart() {
   let buyButton = $('.buy-btn'),
       productQuantity = 0,
-      cart = $('.header-nav__cart .cart-quantity');
+      cart = $('.cart-quantity');
+
 
   $(buyButton).on('click', function(){
     productQuantity += 1;
@@ -122,13 +140,19 @@ function addToCart() {
 }
 
 function cartQuantity() {
-  let cart = $('.header-nav__cart .cart-quantity');
+  let cart = $('.cart-quantity');
   $(cart).text(localStorage.length);
 }
 
 function newsLetter() {
+  
   $('.news-form').on('submit', function(e){
     e.preventDefault();
+
+    const validateEmail = function(email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    };
 
     let name = $('.news-form .name').val();
     let email = $('.news-form .email').val();
@@ -138,8 +162,7 @@ function newsLetter() {
       name: name
     }
 
-    if (name != "" && email != "") {
-         
+    if (name != "" && email != "" && validateEmail(email)) {  
       $.ajax({
         url: "https://corebiz-test.herokuapp.com/api/v1/newsletter",
         type: "POST",
@@ -150,21 +173,46 @@ function newsLetter() {
         },
         success: function (res){
           console.log(res);
+          newSubmitForm();
         },
         error: function (erro){
           console.log(erro);
-          alert("Erro");
         }
       });
       
 
-   } else {
-      if(email == ''){
-        $('.news-form .error-message').text('teste')
-      }
-   }
+    } else if (email === '' || !validateEmail(email)) {
+      $('.news-form__box-mail .email').css({'border': '1px solid red', 'transition': 'none'});
+      $('.news-form__box-mail .error-email').css({'opacity': '1', 'transition': 'none'});
+
+      setTimeout(function(){
+        $('.news-form__box-mail .email').css({'border': 'none', 'transition': 'opacity 1s ease-in-out'});
+        $('.news-form__box-mail .error-email').css({'opacity':'0', 'transition' : 'opacity 1s ease-in-out'});
+      }, 2000)
+    } if (name === '') {
+      $('.news-form__box-name .name').css({'border': '1px solid red', 'transition': 'none'});
+      $('.news-form__box-name .error-name').css({'opacity': '1', 'transition': 'none'});
+
+      setTimeout(function(){
+        $('.news-form__box-name .name').css({'border': 'none', 'transition': 'opacity 1s ease-in-out'});
+        $('.news-form__box-name .error-name').css({'opacity':'0', 'transition' : 'opacity 1s ease-in-out'});
+      }, 2000)
+    }
 
   })
+}
+
+function newSubmitForm() {
+  $('.newsletter__content').hide();
+  $('.newsletter-success').show();
+
+  $('.submit-again').on('click', function(){
+    $('.newsletter-success').hide();
+    $('.newsletter__content').show();
+  })
+
+  $('.news-form .name').val('');
+  $('.news-form .email').val('');
 }
 
 init();

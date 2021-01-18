@@ -1,47 +1,114 @@
-.newsletter{
-    background: #F2F2F2;
-    padding: 24px 0 36px;
+.newsletter {
+  background: #f2f2f2;
+  padding: 24px 0 36px;
 }
 
 .news-title {
-    text-align: center;
-    margin-bottom: 16px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 22px;
-    color: #333333
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  color: #333333;
 }
 
-.news-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.news-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.news-form .name , .email{
-    width: 280px;
-    margin-left: 8px;
-    padding: 16px 15px 17px; 
-    background: #FFFFFF;
-    border-radius: 5px; 
-    outline: none;
-    border: 0px;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
+.news-form .name,
+.email {
+  width: 280px;
+  margin-left: 8px;
+  padding: 16px 15px 17px;
+  background: #ffffff;
+  border-radius: 5px;
+  outline: none;
+  border: 0px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
 }
 
-.news-form .submit{
-    margin-left: 8px;
-    width:140px;
-    background: #000000;
-    color: #ffffff;
-    padding: 15px;
-    border: 0px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 14px;
+.name:focus,
+.email:focus {
+  border: 1px solid #bdbdbd;
+}
+
+.news-form .submit {
+  margin-left: 8px;
+  width: 140px;
+  background: #000000;
+  color: #ffffff;
+  padding: 15px;
+  border: 0px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.error-messages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-name,
+.error-email {
+  color: #d7182a;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 8px;
+  margin-top: 8px;
+
+  opacity: 0;
+}
+
+.newsletter-success {
+  display: none;
+}
+
+.form-success {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-success,
+.form-success-tiny {
+  font-family: "Lato";
+  font-style: normal;
+  color: #000000;
+  text-align: center;
+}
+
+.form-success-tiny {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.submit-again {
+  background: #000000;
+  outline: none;
+  border-radius: 5px;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  width: 328px;
+  margin: auto;
+  justify-content: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  border: 0;
 }

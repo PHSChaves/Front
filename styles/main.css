@@ -1,32 +1,38 @@
-@import 'fonts.css';
-@import 'utils.css';
+@import "fonts.css";
+@import "utils.css";
 
-@import 'header.css';
-@import 'footer.css';
+@import "header.css";
+@import "footer.css";
 
-@import 'newsletter.css';
+@import "newsletter.css";
 
-@import 'main-banner.css';
+@import "main-banner.css";
 
-@import 'shelf.css';
+@import "shelf.css";
+@import "mobile.css";
 
 :root {
-  --main-color: #000000
+  --main-color: #000000;
 }
 
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 
   text-decoration: none;
 
   margin: 0;
 }
 
-body{
-  margin:0;
+body {
+  margin: 0;
 }
 
 main {
   padding-bottom: 69px;
 }
 
+@media screen and (max-width: 768px) {
+  main {
+    padding-bottom: 40px;
+  }
+}
