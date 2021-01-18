@@ -16,7 +16,7 @@ function mainBannerSlide(){
   });
 
   if ($(window).width() < 768) {
-    $(mainBanner).find('img').attr('src', 'img/banner-mobile.jpg');
+    $(mainBanner).find('img').attr('src', 'img/Banner-mobile.jpg');
   } else {
     $(mainBanner).find('img').attr('src', 'img/banner.jpg');
   }
