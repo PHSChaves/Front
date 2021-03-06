@@ -13,10 +13,7 @@ Teste para a vaga de Desenvolvedor Front-End
 <p align="center">
   <img alt="Layout desenvolvido" width="100%" src="layout.png" />
 <p>
-<p align="center">
-  <a href="https://phschaves.github.io/" target="blank">Link para visualização</a>
-<p>
-
+  
 ## Tecnologias Utilizadas
 
 - [X] JQuery
